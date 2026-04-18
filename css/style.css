@@ -1,0 +1,142 @@
+
+
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    flex: 1; /* this makes main take all remaining space */
+    margin-right: 50px; /* add space for sidebar */
+}
+
+footer {
+    background-color:white;
+    text-align: center;
+    padding: 1rem;
+    color: black;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* logo centered */
+    background-color: white;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Hamburger button top-left */
+.hamburger {
+    font-size: 2.5rem;
+    color: orange;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;   /* stays in top-left corner */
+    left: 1rem;
+    top: 1rem;
+    z-index: 1100;     /* above sidebar */
+}
+
+/* Logo container */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo image */
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+/* Logo text */
+.logo-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.logo-subtitle {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: black;
+}
+
+/* Sidebar overlay */
+.sidebar {
+    position: fixed;       /* float over the page */
+    top: 0;
+    left: -250px;          /* hide off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: orange;
+    padding-top: 60px;     /* space for top */
+    transition: left 0.3s ease;
+    z-index: 1000;         /* above all page content */
+}
+
+/* Sidebar active (slide in) */
+.sidebar.active {
+    left: 0;               /* slide over content */
+}
+
+/* Sidebar links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
+}
+
+.sidebar ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Remove any push effect from main content */
+main {
+    margin-left: 0 !important; /* stays in place */
+}
+/* Push main content slightly when sidebar opens (optional) */
+.sidebar.active ~ main {
+    margin-left: 250px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+

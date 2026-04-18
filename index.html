@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maitele Auto Spares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header with navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Hamburger button top-left -->
+            <button class="hamburger" id="hamburger-btn">&#9776;</button>
+
+            <!-- Logo and text (centered) -->
+            <div class="logo-container">
+                <img src="images/logo.jpeg" alt="Maitele Auto Spares Logo" class="logo">
+                <div class="logo-text">
+                    <h1 class="logo-title">Maitele AutoSpares</h1>
+                    <p class="logo-subtitle">'Your vision is our mission'</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar navigation -->
+    <aside id="sidebar" class="sidebar">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Car Parts</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main id="main-content">
+        <h2></h2>
+        <p></p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Car Parts Store</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('close-btn');
+
+    // open sidebar
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.add('active');
+    });
+
+    // close sidebar
+    closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+
+    // click outside to close
+    window.addEventListener('click', (e) => {
+        if (e.target !== sidebar && !sidebar.contains(e.target) && e.target !== hamburger) {
+            sidebar.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
