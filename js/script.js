@@ -2,14 +2,15 @@ const hamburger = document.getElementById('hamburger-btn');
 const sidebar = document.getElementById('sidebar');
 const closeBtn = document.getElementById('close-btn');
 const logoContainer = document.getElementById("logo-container");
+
 // open sidebar
 hamburger.addEventListener('click', () => {
-    sidebar.classList.add('active');
+    sidebar.classList.remove('-translate-x-full');
 });
 
 // close sidebar
 closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
+    sidebar.classList.add('-translate-x-full');
 });
 
 // click outside closes
@@ -18,7 +19,7 @@ window.addEventListener('click', (e) => {
     const isClickHamburger = hamburger.contains(e.target);
 
     if (!isClickInsideSidebar && !isClickHamburger) {
-        sidebar.classList.remove('active');
+        sidebar.classList.add('-translate-x-full');
     }
 });
 
@@ -26,10 +27,9 @@ const homeSection = document.getElementById("home-section");
 const partsSection = document.getElementById("parts-section");
 const contactSection = document.getElementById("contact-section");
 
-
-const navHome = document.getElementById("nav-home");
-const navParts = document.getElementById("nav-parts");
-const navContact = document.getElementById("nav-contact");
+const navHome = document.querySelectorAll("#nav-home");
+const navParts = document.querySelectorAll("#nav-parts");
+const navContact = document.querySelectorAll("#nav-contact");
 
 function showSection(section) {
     homeSection.style.display = "none";
@@ -51,18 +51,23 @@ function showSection(section) {
 // default view
 showSection(homeSection);
 
-// navigation clicks
-navHome.addEventListener("click", (e) => {
-    e.preventDefault();
-    showSection(homeSection);
+navHome.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showSection(homeSection);
+    });
 });
 
-navParts.addEventListener("click", (e) => {
-    e.preventDefault();
-    showSection(partsSection);
+navParts.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showSection(partsSection);
+    });
 });
 
-navContact.addEventListener("click", (e) => {
-    e.preventDefault();
-    showSection(contactSection);
+navContact.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showSection(contactSection);
+    });
 });

@@ -82,10 +82,7 @@ footer {
     z-index: 1000;
 }
 
-/* Sidebar active (slide in) */
-.sidebar.active {
-    left: 0;               /* slide over content */
-}
+
 
 /* Sidebar links */
 .sidebar ul {
