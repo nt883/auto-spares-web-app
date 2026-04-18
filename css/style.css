@@ -1,29 +1,17 @@
-
-
-/* Basic page styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* full viewport height */
-    margin: 0;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    
 }
 
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    text-align: center;
-    flex: 1; /* this makes main take all remaining space */
-    margin-right: 50px; /* add space for sidebar */
-}
+ 
+
 
 footer {
     background-color:white;
@@ -58,7 +46,7 @@ footer {
 /* Logo container */
 .logo-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
 }
@@ -82,17 +70,16 @@ footer {
     color: black;
 }
 
-/* Sidebar overlay */
 .sidebar {
-    position: fixed;       /* float over the page */
+    position: fixed;
     top: 0;
-    left: -250px;          /* hide off-screen initially */
+    left: -250px;
     width: 250px;
     height: 100%;
     background-color: orange;
-    padding-top: 60px;     /* space for top */
-    transition: left 0.3s ease;
-    z-index: 1000;         /* above all page content */
+    padding-top: 60px;
+    transition: left 0.35s ease-in-out;
+    z-index: 1000;
 }
 
 /* Sidebar active (slide in) */
@@ -114,20 +101,14 @@ footer {
     text-decoration: none;
     font-size: 22px;
     font-family: 'Playfair Display', serif;
+    transition: background 0.2s ease;
 }
 
 .sidebar ul li a:hover {
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.15);
 }
 
-/* Remove any push effect from main content */
-main {
-    margin-left: 0 !important; /* stays in place */
-}
-/* Push main content slightly when sidebar opens (optional) */
-.sidebar.active ~ main {
-    margin-left: 250px;
-}
+
 
 .close-btn {
     position: absolute;
@@ -139,4 +120,98 @@ main {
     color: white;
     cursor: pointer;
 }
+
+.parts-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.category-btn {
+    background: black;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-width: 160px;
+}
+
+.category-btn:hover {
+    transform: translateY(-3px);
+    background: rgb(181, 99, 28);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+
+main {
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+#parts-section,
+#home-section,
+#contact-section {
+    width: 100%;
+    max-width: 900px;
+}
+
+.parts-header h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color:black;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+.home-content {
+    text-align: center;
+    max-width: 700px;
+
+    padding: 30px;
+    border-radius: 15px;
+
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.home-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home-content p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+#home-section,
+#parts-section,
+#contact-section {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+
+
+
 

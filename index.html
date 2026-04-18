@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Oswald&family=Bebas+Neue&family=Exo+2&family=Rajdhani&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maitele Auto Spares</title>
@@ -17,8 +18,8 @@
             <button class="hamburger" id="hamburger-btn">&#9776;</button>
 
             <!-- Logo and text (centered) -->
-            <div class="logo-container">
-                <img src="images/logo.jpeg" alt="Maitele Auto Spares Logo" class="logo">
+            <div class="logo-container" id="logo-container">
+                <img src="images/logomaitele.png" alt="Maitele Auto Spares Logo" class="logo">
                 <div class="logo-text">
                     <h1 class="logo-title">Maitele AutoSpares</h1>
                     <p class="logo-subtitle">'Your vision is our mission'</p>
@@ -26,51 +27,59 @@
             </div>
         </nav>
     </header>
+<aside id="sidebar" class="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
 
-    <!-- Sidebar navigation -->
-    <aside id="sidebar" class="sidebar">
-        <button class="close-btn" id="close-btn">&times;</button>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Car Parts</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </aside>
+    <ul>
+        <li><a href="#" id="nav-home">Home</a></li>
+        <li><a href="#" id="nav-parts">Car Parts</a></li>
+        <li><a href="#" id="nav-contact">Contact Us</a></li>
+    </ul>
+</aside>
 
-    <!-- Main content -->
-    <main id="main-content">
-        <h2></h2>
-        <p></p>
-    </main>
+<main id="main-content">
 
+    <!-- HOME -->
+    <section id="home-section">
+        
+    </section>
+
+    <!-- CAR PARTS -->
+    <section id="parts-section" style="display:none;">
+        <div class="parts-header">
+    <h2>Car Parts</h2>
+</div>
+
+<div class="categories">
+    <button class="category-btn" data-category="engine">Engine System</button>
+    <button class="category-btn" data-category="brakes">Brake System</button>
+    <button class="category-btn" data-category="suspension">Suspension</button>
+    <button class="category-btn" data-category="electrical">Electrical</button>
+    <button class="category-btn" data-category="body">Body Parts</button>
+</div>
+
+<div id="products-area"></div>
+
+        <div id="products-area">
+            <!-- products will show here later -->
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact-section" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>Send us a request for the part you need.</p>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</main>
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Car Parts Store</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-    const hamburger = document.getElementById('hamburger-btn');
-    const sidebar = document.getElementById('sidebar');
-    const closeBtn = document.getElementById('close-btn');
-
-    // open sidebar
-    hamburger.addEventListener('click', () => {
-        sidebar.classList.add('active');
-    });
-
-    // close sidebar
-    closeBtn.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-    });
-
-    // click outside to close
-    window.addEventListener('click', (e) => {
-        if (e.target !== sidebar && !sidebar.contains(e.target) && e.target !== hamburger) {
-            sidebar.classList.remove('active');
-        }
-    });
-</script>
+  <script src="js/script.js"></script>  
 
 </body>
 </html>
