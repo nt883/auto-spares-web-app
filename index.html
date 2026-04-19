@@ -3,6 +3,10 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Oswald&family=Bebas+Neue&family=Exo+2&family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maitele Auto Spares</title>
@@ -18,17 +22,20 @@
         &#9776;
     </button>
 
-    <!-- CENTER: Logo -->
     <div class="flex items-center gap-3">
-        <img src="images/logomaitele.png" class="w-10 h-10">
-        <h1 class="font-bold">Maitele AutoSpares</h1>
+    <img src="images/logomaitele.png" class="w-20 h-20">
+
+    <div class="flex flex-col items-start">
+        <h1 class="font-bold text-xl">Maitele AutoSpares</h1>
+        <p class="text-sm text-gray-300 italic font-light tracking-wide">'Your vision is our mission'</p>
     </div>
+</div>
 
     <!-- RIGHT: Desktop Menu (ONLY on large screens) -->
     <ul class="hidden md:flex gap-8 text-lg">
-        <li><a href="#" id="nav-home" class="hover:text-red-500">Home</a></li>
-        <li><a href="#" id="nav-parts" class="hover:text-red-500">Car Parts</a></li>
-        <li><a href="#" id="nav-contact" class="hover:text-red-500">Contact</a></li>
+        <li><a href="#" id="nav-home" class="hover:text-orange-500">Home</a></li>
+        <li><a href="#" id="nav-parts" class="hover:text-orange-500">Car Parts</a></li>
+        <li><a href="#" id="nav-contact" class="hover:text-orange-500">Contact</a></li>
     </ul>
 
 </nav>
@@ -39,74 +46,321 @@ class="fixed top-0 left-0 w-full h-full bg-black text-white transform -translate
     <button class="text-3xl p-6" id="close-btn">&times;</button>
 
     <ul class="flex flex-col gap-6 p-10 text-2xl">
-        <li><a href="#" id="nav-home" class="hover:text-red-500">Home</a></li>
-        <li><a href="#" id="nav-parts" class="hover:text-red-500">Car Parts</a></li>
-        <li><a href="#" id="nav-contact" class="hover:text-red-500">Contact Us</a></li>
+        <li><a href="#" id="nav-home" class="hover:text-orange-500">Home</a></li>
+        <li><a href="#" id="nav-parts" class="hover:text-orange-500">Car Parts</a></li>
+        <li><a href="#" id="nav-contact" class="hover:text-orange-500">Contact Us</a></li>
     </ul>
 
 </aside>
 
 <main id="main-content">
-<section id="home-section" class="text-center py-20 bg-gray-100">
 
-    <h1 class="text-4xl font-bold mb-4">
-        Quality Car Parts You Can Trust
-    </h1>
+<section id="home-section">
 
-    <p class="text-gray-600 mb-6">
-        Affordable, reliable, and built for performance.
-    </p>
+<section class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden bg-black text-white px-6">
 
-    <button class="bg-black text-white px-6 py-3 rounded-lg hover:bg-red-500 transition">
-        Shop Now
-    </button>
+    <!-- background image layer -->
+    <div class="absolute inset-0 opacity-30">
+        <img src="images/workshop.jpg" class="w-full h-full object-cover scale-110 hero-bg">
+    </div>
+
+    <!-- dark overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+    <!-- floating glow effect -->
+<div class="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-orange-500/10 animate-pulse"></div>
+
+    <!-- content -->
+    <div class="relative z-10">
+
+        <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up">
+            Premium Auto Parts
+        </h1>
+
+        <p class="text-gray-300 max-w-xl mb-8 italic" data-aos="fade-up" data-aos-delay="200">
+            Built for performance. Trusted for reliability.
+        </p>
+
+        <button id="browse-btn" class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold 
+hover:bg-orange-600 hover:scale-105 active:scale-95 
+transition duration-300 shadow-lg">
+            Browse Catalogue
+        </button>
+
+    </div>
 
 </section>
 
-    <!-- CAR PARTS -->
-    <section id="parts-section" style="display:none;">
-        <div class="parts-header">
-    <h2>Car Parts</h2>
-</div>
 
-<div class="flex flex-wrap gap-4 justify-center my-6">
+<section class="bg-white py-16 px-6 border-t border-gray-100">
 
-    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Engine</button>
-    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Brakes</button>
-    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Suspension</button>
-    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Electrical</button>
-    <button class="bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">Body</button>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
-</div>
+        <div class="p-6 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up">
+            <h3 class="text-xl font-bold mb-2">Engine Parts</h3>
+            <p class="text-gray-500">Performance-driven components</p>
+        </div>
 
+        <div class="p-6 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="text-xl font-bold mb-2">Brake Systems</h3>
+            <p class="text-gray-500">Safety you can rely on</p>
+        </div>
 
+        <div class="p-6 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-bold mb-2">Suspension</h3>
+            <p class="text-gray-500">Smooth driving experience</p>
+        </div>
 
-<div id="products-area" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-
-    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl transition">
-        <h3 class="font-semibold">Brake Pads</h3>
-        <p class="text-gray-500">R250</p>
-        <button class="mt-3 bg-black text-white px-4 py-2 rounded-lg hover:bg-red-500 transition">
-            Add to Cart
-        </button>
     </div>
 
-</div>
-    </section>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact-section" style="display:none;">
-        <h2>Contact Us</h2>
-        <p>Send us a request for the part you need.</p>
-    </section>
-    
-    
+<section class="bg-gradient-to-b from-gray-100 to-white py-20 px-6">
 
-</main>
-    <!-- Footer -->
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">
+            Featured Parts
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="bg-white p-5 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up">
+                <h3 class="font-semibold text-lg">Brake Pads</h3>
+                <p class="text-gray-500">Front axle set</p>
+                <p class="mt-2 font-bold text-black">Available</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="150">
+                <h3 class="font-semibold text-lg">Engine Oil Filter</h3>
+                <p class="text-gray-500">High efficiency filter</p>
+                <p class="mt-2 font-bold text-black">Available</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="font-semibold text-lg">Shock Absorbers</h3>
+                <p class="text-gray-500">Comfort suspension</p>
+                <p class="mt-2 font-bold text-black">Limited Stock</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="bg-white py-20 px-6">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- image -->
+        <div data-aos="fade-right">
+            <img src="images/image.png" class="rounded-2xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+
+        <!-- text -->
+        <div data-aos="fade-left">
+
+            <h2 class="text-3xl font-bold mb-4">
+                Built for Real Performance
+            </h2>
+
+            <p class="text-gray-600 mb-4">
+                We provide high-quality automotive parts for everyday drivers and professionals.
+                Every product is selected for durability and reliability.
+            </p>
+
+            <p class="text-gray-600 italic">
+                “Quality parts make quality journeys.”
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="bg-black text-white py-20 px-6">
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <div data-aos="fade-up">
+            <h2 class="text-4xl font-bold">500+</h2>
+            <p class="text-gray-300">Available Parts</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150">
+            <h2 class="text-4xl font-bold">10+ Years</h2>
+            <p class="text-gray-300">Industry Experience</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-4xl font-bold">100%</h2>
+            <p class="text-gray-300">Quality Checked</p>
+        </div>
+
+    </div>
     <footer>
         <p>&copy; 2026 Car Parts Store</p>
     </footer>
+      
+
+    </div>
+
+</section>
+
+</section>
+
+
+
+   <section id="parts-section"  class="min-h-screen bg-gray-100 py-10">
+
+    <h2 class="text-center text-3xl font-bold mb-8">Car Parts</h2>
+
+    <div class="flex flex-wrap gap-4 justify-center mb-8">
+        <button id="filter-engine" class="filter-btn bg-black text-white px-4 py-2 rounded-lg">Engine</button>
+
+        <button id="filter-brakes" class="filter-btn bg-black text-white px-4 py-2 rounded-lg">Brakes</button>
+
+        <button id="filter-suspension" class="filter-btn bg-black text-white px-4 py-2 rounded-lg">Suspension</button>
+
+        <button id="filter-all" class="filter-btn bg-black text-white px-4 py-2 rounded-lg">All</button>
+        
+
+        
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
+
+
+        <div class="product bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-category="Oil Filter">
+
+            <img src="images/oil-filter.jpg" class="w-full aspect-[4/3] object-contain bg-white p-2">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-semibold">Oil Filter</h3>
+
+                <p class="text-gray-500 text-sm mt-1">
+                    High-quality oil filters to keep your engine running smoothly.
+                </p>
+
+                <p class="mt-3 font-bold text-black">R250</p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="product bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-category="suspension">
+
+            <img src="images/shock-absober.jpg" class="w-full aspect-[4/3] object-contain bg-white p-2">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-semibold">Shock Absorber</h3>
+
+                <p class="text-gray-500 text-sm mt-1">
+                    High-quality shock absorbers for a smooth and comfortable ride.
+                </p>
+
+                <p class="mt-3 font-bold text-black">R250</p>
+
+            </div>
+
+        </div>
+        <div class="product bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-category="brakes">
+
+            <img src="images/brake-pads.jpg" class="w-full aspect-[4/3] object-contain bg-white p-2">
+
+            <div class="p-4">
+
+                <h3 class="text-lg font-semibold">Brake Pads</h3>
+
+                <p class="text-gray-500 text-sm mt-1">
+                    High-performance braking power for safety and durability.
+                </p>
+
+                <p class="mt-3 font-bold text-black">R250</p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</section> 
+
+    <!-- CONTACT -->
+    <section id="contact-section" class="hidden min-h-screen bg-gradient-to-b from-gray-100 via-white to-gray-50 flex items-center justify-center px-6 py-16">
+
+    <div class="w-full max-w-4xl grid md:grid-cols-2 gap-8 bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+        <!-- LEFT SIDE (branding / info) -->
+        <div class="bg-black text-white p-10 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+
+            <p class="text-gray-300 mb-6">
+                Need a part? Send us a request and we’ll respond instantly on WhatsApp.
+            </p>
+
+            <div class="space-y-3 text-sm text-gray-300">
+                <p>⚡ Fast response</p>
+                <p>🔧 Genuine auto parts support</p>
+                <p>📦 Availability checked instantly</p>
+            </div>
+
+            <div class="mt-8 text-orange-400 font-semibold">
+                Maitele AutoSpares
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (FORM) -->
+        <div class="p-8">
+
+            <h3 class="text-xl font-bold mb-6">Request a Part</h3>
+
+            <form id="whatsapp-form" class="space-y-4">
+
+                <input id="name" type="text" placeholder="First Name"
+                    class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 transition">
+
+                    <input id="last-name" type="text" placeholder="Last Name"
+                    class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 transition">
+
+                <input id="email" type="email" placeholder="Your Email"
+                    class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 transition">
+
+                    <input id="phone" type="tel" placeholder="Phone Number"
+    class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 transition">
+
+                <textarea id="message" placeholder="What part do you need?"
+                    class="w-full p-3 border rounded-xl h-32 resize-none focus:outline-none focus:ring-2 focus:ring-orange-400 transition"></textarea>
+
+                <button type="submit"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl font-semibold transition transform hover:scale-[1.02] active:scale-95 shadow-md">
+                    Send via WhatsApp
+                </button>
+
+                <p class="text-xs text-gray-400 text-center mt-2">
+                    We will respond within minutes during working hours
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+    
+
+</main>
 
   <script src="js/script.js"></script>  
 
